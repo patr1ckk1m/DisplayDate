@@ -8,6 +8,6 @@
 <title>Time</title>
 </head>
 <body>
-<c:out value="${dojoName}"/>
+<c:out value="${time}"/>
 </body>
 </html>

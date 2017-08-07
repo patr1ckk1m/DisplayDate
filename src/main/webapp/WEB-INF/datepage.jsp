@@ -8,6 +8,8 @@
 <title>Date</title>
 </head>
 <body>
-<c:out value="${2+2}"/>
+<span id = "date">
+<c:out value="${date}"/>
+</span>
 </body>
 </html>

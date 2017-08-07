@@ -1,5 +1,10 @@
 package com.patrick.templating;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
+import java.text.SimpleDateFormat;
+import java.util.*;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
@@ -11,12 +16,15 @@ public class HomeController {
 	}
 	@RequestMapping("/date")
 	public String date(Model model) {
-		model.addAttribute("dojoName", "SanJOse");
+		Date date = new java.util.Date();
+		model.addAttribute("date", date);
 		return "datepage.jsp";
 	}
 	@RequestMapping("/time")
 	public String time(Model model) {
-		model.addAttribute("dojoName", "Time");
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat time = new SimpleDateFormat("HH:mm");
+		model.addAttribute("time", time.format(cal.getTime()));
 		return "timepage.jsp";
 	}
 }
